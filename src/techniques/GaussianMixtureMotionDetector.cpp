@@ -1,7 +1,7 @@
-#include "NaiveMotionDetector.h"
+#include "GaussianMixtureMotionDetector.h"
 #include <math.h>
 
-NaiveMotionDetector::NaiveMotionDetector() 
+GaussianMixtureMotionDetector::GaussianMixtureMotionDetector() 
 	: threshold_(20) {
 }
 
