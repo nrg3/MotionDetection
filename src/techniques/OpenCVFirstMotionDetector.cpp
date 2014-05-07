@@ -20,3 +20,6 @@ bool OpenCVFirstMotionDetector::is_motion_at(int x, int y) const {
 const Mat& OpenCVFirstMotionDetector::get_motion_map() const {
 	return fgMask;
 }
+
+OpenCVFirstMotionDetector::~OpenCVFirstMotionDetector() {
+}

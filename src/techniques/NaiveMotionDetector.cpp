@@ -30,7 +30,7 @@ void NaiveMotionDetector::process_new_frame(const Mat& frame) {
 					current_pixels[shift + 1]) > threshold_ || // Green
 					abs(previous_pixels[shift + 2] -           
 					current_pixels[shift + 2]) > threshold_) { // Red
-				motion_map_.at<uchar>(row, column) = 1;
+				motion_map_.at<uchar>(row, column) = 255;
 			} else {
 				motion_map_.at<uchar>(row, column) = 0;
 			}
@@ -40,13 +40,16 @@ void NaiveMotionDetector::process_new_frame(const Mat& frame) {
 }
 
 bool NaiveMotionDetector::is_motion_at(int x, int y) const {
-	if (motion_map_.at<uchar>(x, y) == 1) {
-		return true;
-	} else {
+	if (motion_map_.at<uchar>(x, y) == 0) {
 		return false;
+	} else {
+		return true;
 	}
 }
 
 const Mat& NaiveMotionDetector::get_motion_map() const {
 	return motion_map_;
+}
+
+NaiveMotionDetector::~NaiveMotionDetector() {
 }

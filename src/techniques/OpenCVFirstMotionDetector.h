@@ -24,6 +24,8 @@ public:
 	virtual void process_new_frame(const Mat& frame);
 	virtual bool is_motion_at(int x, int y) const;
 	virtual const Mat& get_motion_map() const;
+
+	virtual ~OpenCVFirstMotionDetector();
 };
 
 
