@@ -5,6 +5,7 @@
 Based on code from https://github.com/safeng/Background-Modeling Copyright (C) 2012 Shuang Feng
 */
 
+/*
 #include <opencv2/highgui/highgui.hpp>
 #include "MotionDetector.h"
 #include "../constants.h"
@@ -23,6 +24,6 @@ public:
 	virtual bool is_motion_at(int x, int y) const;
 	virtual const Mat& get_motion_map() const;
 };
-
+*/
 
 #endif
