@@ -42,7 +42,7 @@ Score get_score_on_pics_sequence(MotionDetector* detector, const string& path, i
 	std::ostringstream stream;
 
 	for (int id = 0; id <= groundtruth_id; ++id) {	
-		stream << path << "/b" << std::setw(5) << std::setfill('0') << id << ".bmp";
+		stream << path << "\\b" << std::setw(5) << std::setfill('0') << id << ".bmp";
 		string file_path = stream.str();
 		stream.str("");
 		stream.clear();
@@ -51,7 +51,7 @@ Score get_score_on_pics_sequence(MotionDetector* detector, const string& path, i
 		detector->process_new_frame(frame);
 	}
 
-	stream << path << "/hand_segmented_" << 
+	stream << path << "\\hand_segmented_" << 
 						std::setw(5) << std::setfill('0') << groundtruth_id << ".bmp";
 	string result_path = stream.str();
 	stream.str("");
